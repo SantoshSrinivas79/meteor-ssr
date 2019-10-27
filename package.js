@@ -1,6 +1,6 @@
 Package.describe({
   "summary": "Server Side Rendering for Meteor with Blaze",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "git": "https://github.com/meteorhacks/meteor-ssr",
   "name": "meteorhacks:ssr"
 });
@@ -14,7 +14,7 @@ Package.onTest(function(api) {
   configurePackage(api);
   api.use([
     'tinytest',
-    'mquandalle:jade-compiler@0.4.4'
+    'mquandalle:jade-compiler@0.4.9'
   ], 'server');
 
   api.addFiles([
@@ -24,8 +24,8 @@ Package.onTest(function(api) {
 });
 
 function configurePackage(api) {
-  api.versionsFrom('METEOR@1.2.0.1');
-  api.use('mquandalle:jade-compiler@0.4.4', { weak: true });
+  api.versionsFrom('METEOR@1.8.1');
+  api.use('mquandalle:jade-compiler@0.4.9', { weak: true });
   api.use(['blaze', 'spacebars', 'spacebars-compiler', 'mongo', 'random'], 'server');
   api.addFiles([
     'lib/overrides.js',
